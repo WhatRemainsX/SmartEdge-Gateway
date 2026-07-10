@@ -1,0 +1,37 @@
+# 编译结果
+*.o
+*.a
+*.so
+*.exe
+*.out
+
+# 构建目录
+build/
+cmake-build-*/
+Debug/
+Release/
+
+# 编辑器文件
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# STM32/Keil 临时文件
+Objects/
+Listings/
+*.uvguix.*
+*.dep
+*.d
+*.crf
+*.axf
+*.hex
+*.bin
+*.map
+
+# 日志
+*.log
