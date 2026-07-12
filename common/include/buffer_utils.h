@@ -52,4 +52,29 @@ int buffer_copy(
     size_t length
 );
 
+
+
+
+/**
+ * @brief 给缓冲区求和。
+ *
+ * @param buffer 缓冲区首地址。
+ * @param length 缓冲区长度。
+ * @param sum 用于返回求和结果。
+ *
+ * @return 0 表示成功，-1 表示参数无效。
+ */
+int buffer_sum(
+    const uint8_t *buffer,
+    size_t length,
+    uint32_t *sum
+);
+
+
+
+
+
+
+
+
 #endif

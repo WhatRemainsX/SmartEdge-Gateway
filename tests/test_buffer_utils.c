@@ -4,7 +4,8 @@
 
 #include <stdio.h>
 #include <stdint.h>
-
+static unsigned int call_count = 0;
+static void increment_call_count(void);
 int main()
 {
 
@@ -48,6 +49,24 @@ int main()
         printf("Error copying buffer.\n");
     }
 
+    uint8_t sum_data[] = {10, 20, 30, 40, 50};
+    uint32_t sum_result=0;
+    if (buffer_sum(sum_data, sizeof(sum_data)/sizeof(sum_data[0]), &sum_result) == 0) {
+        printf("Sum of buffer: %d\n", sum_result);
+    } else {
+        printf("Error calculating sum.\n");
+    }
+
+    increment_call_count();
+    increment_call_count();
+    increment_call_count();
+
+
+
     return 0;
     
+}
+static void increment_call_count(void) {
+    call_count++;
+    printf("Function called %u times\n", call_count);
 }

@@ -61,3 +61,22 @@ int buffer_copy(uint8_t *destination, const uint8_t *source, size_t length)
 }
 
 
+
+int buffer_sum(
+    const uint8_t *buffer,
+    size_t length,
+    uint32_t *sum
+)
+{
+
+    if (buffer == NULL || length == 0 || sum == NULL) {
+        return -1; // 参数无效
+    }
+
+    *sum = 0;
+    for (size_t i = 0; i < length; i++) {
+        *sum += buffer[i];
+    }
+    return 0; // 成功
+}
+
